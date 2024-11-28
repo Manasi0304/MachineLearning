@@ -25,10 +25,9 @@ for columns in df . select_dtypes(include=['number']).columns:
 # Create histograms for each numerical feature using Seaborn
 numerical_columns = df.select_dtypes(include=['number']).columns  # Get numerical columns
 
-for column in numerical_columns:
-    sns.histplot(df[column], kde=True, color='skyblue')  # Create histogram with KDE
-    plt.title(f'Histogram of {column}', fontsize=14)    # Set title
-    plt.xlabel(column, fontsize=12)                     # Set x-axis label
-    plt.ylabel('Frequency', fontsize=12)                # Set y-axis label
-    plt.grid(axis='y', linestyle='--', alpha=0.7)       # Add grid lines
-    plt.show()  # Show each histogram one by one
+for i in df.columns:
+    sns.histplot(df[i],kde=True,color='blue',bins=20)
+    plt.xlabel(i)
+    plt.ylabel('frequency')
+    plt.title(f'Histogram of {i}')
+    plt.show()
