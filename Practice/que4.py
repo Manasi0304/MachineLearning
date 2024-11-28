@@ -10,10 +10,6 @@ future. Find the root node of the decision tree. """
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
-import pandas as pd
-
-import pandas as pd
 import math
 
 # Load the dataset
